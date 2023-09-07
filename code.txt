@@ -1,0 +1,19 @@
+#!/bin/bash
+
+ssh -o StrictHostKeyChecking=no ubuntu@13.51.166.185 <<EOF
+directory="webdriver-tests"
+
+if test -d \$directory; then
+    echo "Latest scripts are pulled from git"
+    cd \$directory/
+    git pull
+    cd ..
+else
+    echo "Fresh scripts are cloned from git"
+    git clone https://github.com/mukesh012/webdriver-tests.git
+fi
+
+cd \$directory/
+chmod +x trigger_valiation.sh
+./trigger_valiation.sh
+EOF
