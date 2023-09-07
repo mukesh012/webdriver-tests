@@ -58,7 +58,7 @@ if is_folder "webdriver-tests"; then
  echo "Repo Already is in this ubuntu"
 else
  echo "Repo not available"
- git clone https://github.com/TestLeafInc/webdriver-tests
+ git clone https://github.com/mukesh012/webdriver-tests.git
 fi
 cd ~
 cd webdriver-tests/
