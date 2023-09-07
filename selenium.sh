@@ -53,13 +53,7 @@ else
  sudo dpk -i google-chrome-stable_114.0.5735.198-1_amd64.deb
  sudo apt --fix-broken install
 fi
-# check folder is present exist or not?
-if is_folder "webdriver-tests"; then
- echo "Repo Already is in this ubuntu"
-else
- echo "Repo not available"
- git clone https://github.com/mukesh012/webdriver-tests.git
-fi
+
 cd ~
 cd webdriver-tests/
 mvn clean test
